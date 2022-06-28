@@ -30,7 +30,7 @@ pipeline {
             }
             steps {
                 script {
-//                  sh 'docker login -u $thiyagurio -p $docker-demo'
+//                  sh 'docker login -u $thiyagurio -p $docker-demo 54.152.228.229'
                     sh 'docker pull thiyagurio/node-demo:master'
                     sh 'docker stop node-demo'
                     sh 'docker rm node-demo'
