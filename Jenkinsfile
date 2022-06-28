@@ -18,7 +18,7 @@ pipeline {
             steps {
                 script {
                     def dockerImage = docker.build("thiyagurio/node-demo:master")
-                    docker.withRegistry('', 'demo-docker') {
+                    docker.withRegistry('', 'docker-demo') {
                         dockerImage.push('master')
                     }
                 }
@@ -26,7 +26,7 @@ pipeline {
         }
         stage('Deploy to remote docker host') {
             environment {
-                DOCKER_HOST_CREDENTIALS = credentials('	docker-demo')
+                DOCKER_HOST_CREDENTIALS = credentials('docker-demo')
             }
             steps {
                 script {
