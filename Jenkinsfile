@@ -26,7 +26,7 @@ pipeline {
         }
         stage('Deploy to remote docker host') {
             environment {
-                DOCKER_HOST_CREDENTIALS = credentials('demo-docker')
+                DOCKER_HOST_CREDENTIALS = credentials('	docker-demo')
             }
             steps {
                 script {
