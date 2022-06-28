@@ -30,7 +30,7 @@ pipeline {
             }
             steps {
                 script {
-//                     sh 'docker login -u $DOCKER_HOST_CREDENTIALS_USR -p $DOCKER_HOST_CREDENTIALS_PSW 127.0.0.1:2375'
+//                  sh 'docker login -u $thiyagurio -p $docker-demo'
                     sh 'docker pull thiyagurio/node-demo:master'
                     sh 'docker stop node-demo'
                     sh 'docker rm node-demo'
