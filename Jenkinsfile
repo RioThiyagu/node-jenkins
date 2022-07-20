@@ -31,6 +31,7 @@ pipeline {
             steps {
                 script {
 //                  sh 'docker login -u $thiyagurio -p $docker-demo 54.152.228.229'
+                    sh 'docker rm -f node-demo:master'
                     sh 'docker pull thiyagurio/node-demo:master'
                     sh 'docker tag thiyagurio/node-demo:master thiyagurio/node-demo:master'
                     sh 'docker run -d --name node-demo -p 80:3000 thiyagurio/node-demo:master'
